@@ -1,0 +1,47 @@
+/* =========== ESTILOS GENERALES ==========*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/*=============== CONTENEDOR ===============*/
+
+.contenedor {
+  
+}
+
+/*=============== HEADER ===============*/
+
+.header{
+    
+}
+
+/*=============== MENU PRINCIPAL ===============*/
+
+.header .menu-principal{
+    
+}   
+
+.header .menu-principal a{
+    
+   
+
+}
+
+/*==================== LOGOS ===================*/
+
+.header .contenedor-logo{
+
+    
+}
