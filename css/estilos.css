@@ -1,4 +1,4 @@
-/* =========== ESTILOS GENERALES ==========*/
+/*=============== ESTILOS GENERALES ===============*/
 
 *{
     padding: 0;
@@ -8,6 +8,8 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background: #E62256;
 }
 
 a{
@@ -15,33 +17,263 @@ a{
     color: #000;
 }
 
-/*=============== CONTENEDOR ===============*/
+
+/*=====================================================*/
+/*=============== CONTENEDOR PRINCIPAL ===============*/
+/*===================================================*/
 
 .contenedor {
-  
+     
+    background-image: url(../imagenes/Fondo-480.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color:#E62256;
+    box-sizing: content-box;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
 }
 
-/*=============== HEADER ===============*/
+/*==============  BACKGROUND  ===============*/
 
-.header{
-    
+.contenedor .imagen-centro{
+    background-image: url(../imagenes/Centro-Imagen-Fondo-480.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 300px;
+    margin: auto;
 }
 
-/*=============== MENU PRINCIPAL ===============*/
+.contenedor .contenedor-cortina .contenedor-cortina-izquierda{
+    position: absolute;
+    background-image: url(../imagenes/Cortina-480.svg);
+    background-repeat: no-repeat;
+    width:200px;
+    height:750px;
+    top: -100px;
+}
 
-.header .menu-principal{
+.contenedor .contenedor-cortina .contenedor-cortina-derecha{
+    position: absolute;
+    background-image: url(../imagenes/Cortina-480.svg);
+    background-repeat: no-repeat;
+    width:18em;
+    height:750px;
+    top: -100px;
+    right:0 ;
+    transform: scaleX(-1);
+}
+
+/*==============  CONTENEDRO DE GRILLA  ===============*/
+
+.contenedor .contenedor-grid {
+    position: absolute;
+    width: 100%;
+    height: 100vh;   
+    top: 0;                
+}
+
+/*===================  GRILLA ========================*/
+
+.contenedor .contenedor-grid .grid{
     
+    display:grid;
+    grid-gap:10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px 400px 1fr;
+    grid-template-areas: "logo . logo-2"
+                         "contenido contenido contenido"
+                         "sidebar sidebar sidebar"
+                         "footer footer footer";
+
+}
+
+/*==================== HEADER ======================*/
+
+
+/*================== MENU PRINCIPAL =================*/
+
+.contenedor .contenedor-grid .grid .menu-principal{
+    grid-area: navegacion;
+    background: darkgreen;
+    display:none;
 }   
 
-.header .menu-principal a{
-    
+/*==================== LOGOS ==================*/
+
+.contenedor-logo-principal{
+    grid-area: logo;
+    border:  red 3px solid;
    
+}
+
+.contenedor-logo-principal img{
+    width: 110px;
+    margin-top: 20px; 
+}
+
+
+.contenedor-logo-2{
+    grid-area: logo-2;
+    display:flex;
+    border: green 3px solid;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.contenedor-logo-2 a{
+    margin-bottom: 60px;
+}
+
+
+.contenedor-logo-2 img{
+    width: 80px;
+}
+
+/*==================== CONTENIDO PRINCIPAL ==================*/
+/*
+.contenedor-main{
+    display: flex;
+    grid-area: contenido;
+    border: darkorchid 3px solid;
+    justify-content:center;
+    align-items: center;
+}
+
+.contenedor-main .main{
+    display:flex;
+    width: 90%;
+    height: 90%;
+    justify-content:center;
+    align-items: center;
+    border: #E62256 3px solid;
+}
+*/
+
+/*==================== ASIDE IZQUIERDA ==================*/
+/* .aside-izquierda{
+    grid-area: sidebar;
+    border: darkmagenta 3px solid;
+}  */
+
+
+/*==================== ASIDE DERECHA ==================*/
+
+
+/* ================ FOOTER ===================== */
+
+.footer{
+    display: grid;
+    grid-area: footer;
+    height: 50vh;
+    position: relative;
+    border: blue 3px solid;  
+    justify-items: center;  
+    align-items: flex-end;  
 
 }
 
-/*==================== LOGOS ===================*/
-
-.header .contenedor-logo{
-
+.footer .contenedor-footer{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content:center;
+    align-items: flex-end;
     
+}
+ 
+
+.footer .contenedor-footer .caja-1{
+    width: 100%;
+    height: 55%;
+    position: absolute;
+    background: #2C0D10;
+    box-shadow: 0px 0px 20px rgba(0,0,0,3);
+    z-index: 100;
+}
+
+.footer .contenedor-footer .caja-2{
+    display: flex;
+    width: 100%;
+    height: 45%;
+    position: absolute;
+    z-index: 0;
+    align-self:flex-start;
+}
+
+.footer .patron-footer{ 
+    width: 100%;
+    position:absolute;  
+    bottom: 61px;   
+    z-index: 400;
+} 
+
+ .footer .imagen-mitad-del-mundo{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 80px;
+    justify-content: center;
+    z-index: 200;
+}
+
+.footer .imagen-mitad-del-mundo img{
+    width: 40%;
+}
+
+
+.footer .imagen-izquierda-footer{
+    display: flex;
+    width: 100%;
+}
+
+.footer .imagen-izquierda-footer img{
+    width: 26%;
+    position: absolute;
+    align-self: flex-end;
+}
+
+.footer .imagen-derecha-footer{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.footer .imagen-derecha-footer img{
+    width: 26%;
+    position: absolute;
+    align-self: flex-end;
+}
+
+
+
+/* ================ REDES SOCIALES ===================== */
+
+.footer .redes-sociales{
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 500;
+}
+
+
+.footer .redes-sociales a{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    margin: 0 10px;
+    color: #2C0D10;
+    transition: 0.4s;
+}
+
+.footer .redes-sociales a:hover{
+    background: #2C0D10;
+    color: #fff;
+    font-size: 30px;
 }
