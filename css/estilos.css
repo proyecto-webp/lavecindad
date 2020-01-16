@@ -81,9 +81,9 @@ a{
     display:grid;
     grid-gap:10px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 300px 300px 400px 1fr;
+    grid-template-rows: 1fr 500px 1fr 1fr;
     grid-template-areas: "logo . logo-2"
-                         "contenido contenido contenido"
+                         ". contenido ."
                          "sidebar sidebar sidebar"
                          "footer footer footer";
 
@@ -132,7 +132,7 @@ a{
 }
 
 /*==================== CONTENIDO PRINCIPAL ==================*/
-/*
+
 .contenedor-main{
     display: flex;
     grid-area: contenido;
@@ -148,14 +148,35 @@ a{
     justify-content:center;
     align-items: center;
     border: #E62256 3px solid;
-}
-*/
+} 
+
 
 /*==================== ASIDE IZQUIERDA ==================*/
-/* .aside-izquierda{
+ .aside-izquierda{
+    display: grid;
     grid-area: sidebar;
     border: darkmagenta 3px solid;
-}  */
+    z-index: 500px;
+    justify-items: center;
+    align-items: center;
+
+}    
+
+.aside-izquierda .boton-evento{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.aside-izquierda .boton-evento img{
+    width: 80%;
+    height: 80%;
+}
+
+
 
 
 /*==================== ASIDE DERECHA ==================*/
