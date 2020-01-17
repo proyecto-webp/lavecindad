@@ -11,8 +11,6 @@
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    
 </head>
 
 <body>
@@ -57,15 +55,17 @@
                     </div>
                     
                     <!-- MENÚ PRINCIPAL -->
-                    <nav>
+                   <div id="menu-principal-toggle" class="menu-principal-toggle"></div>
+                    <nav id="nav-principal" class="nav-principal">
+                        <img  class="marco-menu" src="imagenes/Marco-Menu-480.svg" alt="">
                         <ul class="menu-principal">
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
+                            <li class="menu-principal-item"><a href="#">QUIENES SOMOS</a></li>
+                            <li class="menu-principal-item"><a href="#">VIVE LA EXPERIENCIA CUATE</a></li>
+                            <li class="menu-principal-item"><a href="#">CONTÁCTANOS</a></li>
+                            <li class="menu-principal-item"><a href="#">CARTA MENÚ</a></li>
+                            <li class="menu-principal-item"><a href="#">UBÍCANOS</a></li>
                         </ul>
-                    </nav>
+                    </nav> 
 
                     
 
@@ -79,25 +79,15 @@
 
                 <!-- SIDEBAR IZQUIERDA-->
                 <aside class="aside-izquierda">
-                    <!-- <div class="boton-evento"> -->
+                    <div class="contenedor-carousel">
                         <div class="carousel center-align">                   
-                                <div class="carousel-item">
-                                    <img src="imagenes/Eventos-480.svg" alt="">
-                                </div>   
-                                <div class="carousel-item">
-                                    <img src="imagenes/Delivery-480.svg" alt="">
-                                </div> 
-                                <div class="carousel-item">
-                                    <img src="imagenes/Reservas-480.svg" alt="">
-                                </div> 
-                                <div class="carousel-item">
-                                    <img src="imagenes/Cuates-en-tu-evento-480.svg" alt="">
-                                </div> 
-                                <div class="carousel-item">
-                                    <img src="imagenes/Comentarios-480.svg" alt="">
-                                </div> 
-                        </div> 
-                    <!-- </div> -->
+                            <a class="carousel-item" href="#"><img src="imagenes/Eventos-480.svg"></a>
+                            <a class="carousel-item" href="#"><img src="imagenes/Delivery-480.svg"></a>
+                            <a class="carousel-item" href="#"><img src="imagenes/Cuates-en-tu-evento-480.svg"></a>
+                            <a class="carousel-item" href="#"><img src="imagenes/Comentarios-480.svg"></a>
+                            <a class="carousel-item" href="#"><img src="imagenes/Reservas-480.svg"></a>
+                        </div>
+                    </div> 
                 </aside>
 
                 <!-- SIDEBAR DERECHA -->
@@ -149,5 +139,6 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="javascript/main.js"></script>
+    
 </body>
 </html>
