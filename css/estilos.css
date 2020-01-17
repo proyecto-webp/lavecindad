@@ -157,24 +157,20 @@ a{
     grid-area: sidebar;
     border: darkmagenta 3px solid;
     z-index: 500px;
-    justify-items: center;
-    align-items: center;
-
+    /* justify-content: center; */
+    /* align-items: center; */
+    overflow: hidden;
 }    
-
+/*
 .aside-izquierda .boton-evento{
     display: flex;
     width: 80%;
     height: 80%;
     justify-content: center;
     align-items: center;
-
+    background: skyblue;
 }
-
-.aside-izquierda .boton-evento img{
-    width: 80%;
-    height: 80%;
-}
+*/
 
 
 
