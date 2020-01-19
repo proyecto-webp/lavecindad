@@ -22,11 +22,11 @@ a{
 /*=============== CONTENEDOR PRINCIPAL ===============*/
 /*===================================================*/
 
-.contenedor {
+.contenedor{
      
-    background-image: url(../imagenes/Fondo-480.svg);
+    /* background-image: url(../imagenes/Imagenes-menu/4.-Carta\ Menu-01.jpg);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     background-color:#E62256;
     box-sizing: content-box;
     justify-content: center;
@@ -36,7 +36,7 @@ a{
 
 /*==============  BACKGROUND  ===============*/
 
-.contenedor .imagen-centro{
+.imagen-centro{
     background-image: url(../imagenes/Centro-Imagen-Fondo-480.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -45,7 +45,7 @@ a{
     margin: auto;
 }
 
-.contenedor .contenedor-cortina .contenedor-cortina-izquierda{
+.contenedor-cortina .contenedor-cortina-izquierda{
     position: absolute;
     background-image: url(../imagenes/Cortina-480.svg);
     background-repeat: no-repeat;
@@ -54,7 +54,7 @@ a{
     top: -100px;
 }
 
-.contenedor .contenedor-cortina .contenedor-cortina-derecha{
+.contenedor-cortina .contenedor-cortina-derecha{
     position: absolute;
     background-image: url(../imagenes/Cortina-480.svg);
     background-repeat: no-repeat;
@@ -67,7 +67,7 @@ a{
 
 /*==============  CONTENEDRO DE GRILLA  ===============*/
 
-.contenedor .contenedor-grid {
+.contenedor-grid {
     position: absolute;
     width: 100%;
     height: 100vh;   
@@ -76,15 +76,14 @@ a{
 
 /*===================  GRILLA ========================*/
 
-.contenedor .contenedor-grid .grid{
+.contenedor-grid .grid{
     
     display:grid;
     grid-gap:10px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 200px 1fr 100px;
+    grid-template-rows: 1fr 600px auto;
     grid-template-areas: "logo . logo-2"
-                         ". contenido ."
-                         "sidebar sidebar sidebar"
+                         "contenido contenido contenido"
                          "footer footer footer";
 
 }
@@ -94,27 +93,21 @@ a{
 
 /*================== MENU PRINCIPAL =================*/
 .menu-principal-toggle{
-    display:flex;
+    display: flex;
     grid-area: logo-2;
-    width: 2rem;
-    height: 1.6rem;
+    width: 2.4rem;
+    height: 2rem;
     background:linear-gradient(white 20%, transparent 20%, transparent 40%, white 40%, white 60%, transparent 60%, transparent 80%,white 80% );
     cursor: pointer;
     z-index: 800;
-    position: absolute;
-    right: 55px;
-    top:70px;
-    
-}
-.menu-imagen{
-    grid-area: logo-2;
-    position: absolute;
-    right:-25px;
-    top: 35px;
+    margin-top: 50px;
+    margin-left: 40px;
 }
 
-.menu-imagen img{
-    width: 70%;
+.menu-imagen{
+    grid-area: logo-2;
+    width: 100%;
+    z-index: 800;
 }
 
 .nav-principal{
@@ -190,7 +183,8 @@ a{
 
 .contenedor-logo-principal img{
     width: 110px;
-    margin-top: 20px; 
+    margin-top: 30px; 
+    margin-left: 20px;
 }
 
 
@@ -211,75 +205,31 @@ a{
     width: 80px;
 }
 
-/*==================== CONTENIDO PRINCIPAL ==================*/
-
-.contenedor-main{
+/*==================== CONTENIDO FULLPAGES ==================*/
+.main{
     display: flex;
-    grid-area: contenido;
-    border: darkorchid 3px solid;
-    justify-content:center;
-    align-items: center;
-}
-
-.contenedor-main .main{
-    display:flex;
-    width: 90%;
-    height: 90%;
-    justify-content:center;
-    align-items: center;
-    border: #E62256 3px solid;
-} 
-
-
-/*==================== ASIDE IZQUIERDA ==================*/
- .aside-izquierda{
-    display: grid;
-    grid-area: sidebar;
-    border: darkmagenta 3px solid;
-    z-index: 500px;
-    overflow: hidden;
-}    
-
-.contenedor-carousel{
-    position: relative;    
-    /* background: red; */
-    
-}
-
-.carousel{
-    position: relative;
-    /* background: lightgreen; */
-    width: 10px;
-    height: 10px;
-    
-}
-.carousel-item{
-    /* background: green; */
-    position: relative;
-    width: 20%;    
-}
-
-.corousel .carousel-item img{
-    background-size: 40%;
-    background:blue;
-    z-index: 600;
-    max-width: 50%;
-}
-/*
-.aside-izquierda .boton-evento{
-    display: flex;
+    grid-area:contenido;
+    border: 2px solid lightgreen;
+    overflow: scroll;
     width: 80%;
-    height: 80%;
+    justify-self: center;
     justify-content: center;
-    align-items: center;
-    background: skyblue;
+    align-items: start;
+    
+
 }
-*/
+
+.full-page{
+    width: 100%;
+    background:red;
+}
+.section img{
+    align-self: start;
+    width: 100%;
+}
 
 
 
-
-/*==================== ASIDE DERECHA ==================*/
 
 
 /* ================ FOOTER ===================== */
@@ -287,7 +237,7 @@ a{
 .footer{
     display: grid;
     grid-area: footer;
-    height: 30vh;
+    height: 50vh;
     position: relative;
     border: blue 3px solid;  
     justify-items: center;  
@@ -388,10 +338,9 @@ a{
     align-items: center;
     justify-content: center;
     border-radius: 100px;
-    margin:  10px;
+    margin: 0 10px;
     color: #2C0D10;
     transition: 0.4s;
-    margin-top: -100px;
 }
 
 .footer .redes-sociales a:hover{
