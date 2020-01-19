@@ -70,10 +70,9 @@ h1, h2, h3, h4, h5, h6{
 }
     
 
+/* PRIMERA IMAGEN  */
+
 .header{
-    /* background-image: url(../imagenes/Imagenes-menu/4.-Carta\ Menu-01.jpg);
-    background-repeat: no-repeat;
-    background-position: center; */
     width: 100%;
 }
 .header .contenedor-icono{
@@ -121,20 +120,3 @@ h1, h2, h3, h4, h5, h6{
 
 
 
-.seccion-entrarle-solito article{
-    background-position: center;
-    background-repeat: no-repeat;
-
-}
-
-.seccion-entrarle-solito article:nth-child(1){
-     
-}
-
-.seccion-entrarle-solito article:nth-child(2){
- 
-}
-
-.seccion-entrarle-solito article:nth-child(3){
-    
-}
