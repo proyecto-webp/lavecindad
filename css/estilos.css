@@ -503,9 +503,62 @@ a{
     z-index: 200;
 }
 
-.footer .imagen-mitad-del-mundo img{
-    width: 40%;
+
+.imagen-mitad-del-mundo img.monumento{
+    position: relative;
+    width: 25%;
+    z-index: 500;
 }
+
+.imagen-mitad-del-mundo img.alas-izq{
+    position: relative;
+    width: 17%;
+    height: auto;
+    z-index: 200;
+    margin-right: 105px;
+    margin-bottom: 47px;
+    animation: animacion-alas-izq 1s 3s ease-in-out alternate-reverse  8;
+    animation-fill-mode: forwards;
+    
+}
+
+.imagen-mitad-del-mundo img.alas-der{
+    position: relative;
+    width: 17%;
+    height: auto;
+    z-index: 200;
+    margin-left: 105px;
+    margin-bottom: 47px;
+    animation: animacion-alas-der 1s 3s ease-in-out alternate-reverse 8;
+    animation-fill-mode: forwards;
+    transform: scaleX(-1);
+    
+}
+
+/* ANIMACIONES ALAS  */
+
+@keyframes animacion-alas-izq{
+    0% {transform: rotate(-10deg) translateY(15px);}
+    20% {transform: rotate(0deg) translateY(0px);}
+    75% {transform: rotate(-10deg) translateY(15px);}
+    100% {transform: rotate(0deg) translateY(0px);}
+}
+@keyframes animacion-alas-der{
+    0% {transform: rotate(10deg) scaleX(-1) translateY(15px);}
+    20% {transform: rotate(0deg) scaleX(-1) translateY(0px);}
+    75% {transform: rotate(10deg) scaleX(-1) translateY(15px);}
+    100% {transform: rotate(0deg) scaleX(-1) translateY(0px);}
+}
+/* animation: movimientos-chavo 1s 3s ease-out alternate-reverse 6; */
+
+
+/* @keyframes movimientos-mariachi{
+    0% {transform: rotate(5deg);}
+    25% {transform: rotate(0);}
+    75% {transform: rotate(5deg);}
+    100%{transform: rotate(0);}
+} */
+
 
 
 .footer .imagen-izquierda-footer{
