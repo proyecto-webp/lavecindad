@@ -510,11 +510,22 @@ a{
     z-index: 500;
 }
 
-.imagen-mitad-del-mundo img.alas-izq{
+.contenedor-alas{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 60px;
+    justify-content: center;
+    z-index: 100;
+}
+
+
+
+.contenedor-alas img.alas-izq{
     position: relative;
     width: 17%;
     height: auto;
-    z-index: 200;
+    z-index: 700;
     margin-right: 105px;
     margin-bottom: 47px;
     animation: animacion-alas-izq 1s 3s ease-in-out alternate-reverse  8;
@@ -522,7 +533,7 @@ a{
     
 }
 
-.imagen-mitad-del-mundo img.alas-der{
+.contenedor-alas img.alas-der{
     position: relative;
     width: 17%;
     height: auto;
