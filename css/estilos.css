@@ -48,7 +48,7 @@ a{
     box-sizing: content-box;
     height: 100vh;
     width: 80%;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     margin: auto;
     left: 10%;
     position: absolute;
@@ -275,7 +275,7 @@ a{
 }
 
 .menu-principal-item:not(:last-of-type){
-    border-bottom: 1px solid #fff ;
+    /* border-bottom: 1px solid #fff ; */
 }
 
 .menu-principal-item:hover{
@@ -299,7 +299,7 @@ a{
 /*==================== LOGOTIPO LA VECIDAD DE LOS CUATES ==================*/
 .contenedor-logo-principal{
     grid-area: logo;
-    border:  1px solid red;
+    /* border:  1px solid red; */
 
 }
 
@@ -321,7 +321,7 @@ a{
 .contenedor-logo-2{
     grid-area: logo-2;
     display:flex;
-    border: green 1px solid;
+    /* border: green 1px solid; */
     justify-content: flex-end;
     align-items: flex-end;
 }
@@ -343,7 +343,7 @@ a{
 .contenedor-main{
 
     grid-area: contenido;
-    border: darkorchid 1px solid;
+    /* border: darkorchid 1px solid; */
 
 }
 
@@ -356,7 +356,7 @@ a{
  .carrusel{
     /* grid-area: carrusel; */
     /* display: grid; */
-    border: darkmagenta 13px solid;
+    /* border: darkmagenta 13px solid; */
     z-index: 500px;
     display: none;
 }
@@ -397,7 +397,7 @@ a{
     grid-area: aside-derecha;
     width: 100%;
     height: 100%;
-    border: 1px solid lightskyblue;
+    /* border: 1px solid lightskyblue; */
     box-sizing: border-box;
 }
 
@@ -422,7 +422,7 @@ a{
     grid-area: aside-izquierda;
     width: 100%;
     height: 100%;
-    border: 1px solid lightskyblue;
+    /* border: 1px solid lightskyblue; */
     box-sizing: border-box;
 
 }
@@ -448,7 +448,7 @@ a{
     grid-area: footer;
     height: 25vh;
     position: relative;
-    border: blue 1px solid;
+    /* border: blue 1px solid; */
     justify-items: center;
     align-items: flex-end;
 
@@ -473,7 +473,7 @@ a{
     background: #2C0D10;
     box-shadow: 0px 0px 40px rgba(0,0,0,10);
     z-index: 100;
-    border: 1px solid lightseagreen;
+    /* border: 1px solid lightseagreen; */
 }
 
 .footer .contenedor-footer .caja-2{
@@ -483,7 +483,7 @@ a{
     position: absolute;
     z-index: 0;
     align-self:flex-start;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     /* bottom: 220px; */
 }
 
