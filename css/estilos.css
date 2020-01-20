@@ -1,5 +1,4 @@
 /*=============== ESTILOS GENERALES ===============*/
-
 *{
     padding: 0;
     margin: 0;
@@ -17,11 +16,9 @@ a{
     color: #000;
 }
 
-
 /*=====================================================*/
 /*=============== CONTENEDOR PRINCIPAL ===============*/
 /*===================================================*/
-
 .contenedor {
      
     background-image: url(../imagenes/Fondo-480.svg);
@@ -32,12 +29,12 @@ a{
     justify-content: center;
     height: 100vh;
     position: relative;
+    
 }
 
 /*==============  BACKGROUND  ===============*/
-
 .contenedor .imagen-centro{
-    background-image: url(../imagenes/Centro-Imagen-Fondo-480.svg);
+    /* background-image: url(../imagenes/Centro-Imagen-Fondo-480.svg); */
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
@@ -65,8 +62,7 @@ a{
     transform: scaleX(-1);
 }
 
-/*==============  CONTENEDRO DE GRILLA  ===============*/
-
+/*=================  CONTENEDOR DE GRILLA  ===============*/
 .contenedor .contenedor-grid {
     position: absolute;
     width: 100%;
@@ -74,49 +70,54 @@ a{
     top: 0;                
 }
 
-/*===================  GRILLA ========================*/
-
+/*===================  GRILLA  ========================*/
 .contenedor .contenedor-grid .grid{
     
     display:grid;
     grid-gap:10px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 200px 1fr 100px;
+    grid-template-rows: 1fr 100px 1fr;
     grid-template-areas: "logo . logo-2"
-                         ". contenido ."
-                         "sidebar sidebar sidebar"
+                         "aside-izquierda . ."
                          "footer footer footer";
 
 }
 
-/*==================== HEADER ======================*/
+/*===========================================================*/
+/*====================== HEADER ============================*/
+/*=========================================================*/
 
+/*================= NAVEGADOR PRINCIPAL =================*/
 
-/*================== MENU PRINCIPAL =================*/
+/*==================  BOTÓN MENÚ  =====================*/
+/*
 .menu-principal-toggle{
     display:flex;
     grid-area: logo-2;
-    width: 2rem;
-    height: 1.6rem;
+    width: 1.2rem;
+    height: 1rem;
     background:linear-gradient(white 20%, transparent 20%, transparent 40%, white 40%, white 60%, transparent 60%, transparent 80%,white 80% );
     cursor: pointer;
     z-index: 800;
     position: absolute;
-    right: 55px;
-    top:70px;
-    
+    right: 43px;
+    top:73px;
 }
+*/
+
 .menu-imagen{
     grid-area: logo-2;
-    position: absolute;
-    right:-25px;
-    top: 35px;
+    position: relative;
+    top: 40px;
+    /* right: -50px; */
 }
 
 .menu-imagen img{
-    width: 70%;
+    width: 57%;
 }
 
+
+/*======================BARRA DE MENÚ===================== */
 .nav-principal{
     display: flex;
     position: fixed;   
@@ -182,73 +183,66 @@ a{
 
 /*==================== LOGOS ==================*/
 
+/*==================== LOGOTIPO LA VECIDAD DE LOS CUATES ==================*/
 .contenedor-logo-principal{
     grid-area: logo;
-    border:  red 3px solid;
+    border:  1px solid red;
    
 }
 
 .contenedor-logo-principal img{
-    width: 110px;
-    margin-top: 20px; 
+    width: 105px;
+    margin-top: 35px; 
+    margin-left: 8px;
 }
 
-
+/*==================== LOGOTIPO CUATES MÁS CHIDOS ==================*/
 .contenedor-logo-2{
     grid-area: logo-2;
     display:flex;
-    border: green 3px solid;
+    border: green 1px solid;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
 .contenedor-logo-2 a{
-    margin-bottom: 60px;
+    margin-bottom: 10px;
+    margin-right: 10px ;
 }
 
 
 .contenedor-logo-2 img{
-    width: 80px;
+    width: 74px;
 }
 
-/*==================== CONTENIDO PRINCIPAL ==================*/
+/*===========================================================*/
+/*===============CONTENIDO PRINCIPAL========================*/
+/*=========================================================*/
 
 .contenedor-main{
-    display: flex;
+
     grid-area: contenido;
-    border: darkorchid 3px solid;
-    justify-content:center;
-    align-items: center;
+    border: darkorchid 1px solid;
+
 }
 
 .contenedor-main .main{
-    display:flex;
-    width: 90%;
-    height: 90%;
-    justify-content:center;
-    align-items: center;
-    border: #E62256 3px solid;
+
 } 
 
 
-/*==================== ASIDE IZQUIERDA ==================*/
- .aside-izquierda{
-    display: grid;
-    grid-area: sidebar;
-    border: darkmagenta 3px solid;
+/*======================== CORRUSEL ==================*/
+ .carrusel{
+    /* grid-area: carrusel; */
+    /* display: grid; */
+    border: darkmagenta 13px solid;
     z-index: 500px;
-    overflow: hidden;
+    display: none;
 }    
-
-.contenedor-carousel{
-    position: relative;    
-    /* background: red; */
-    
-}
 
 .carousel{
     position: relative;
-    /* background: lightgreen; */
+    background: lightgreen;
     width: 10px;
     height: 10px;
     
@@ -277,17 +271,31 @@ a{
 */
 
 
-
-
 /*==================== ASIDE DERECHA ==================*/
+.aside-derecha{
+    grid-area: aside-derecha;
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightskyblue;
+}
 
+/*==================== ASIDE IZQUIERDA ==================*/
+.aside-izquierda{
+    grid-area: aside-izquierda;
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightskyblue;
+    box-sizing: border-box;
+}
 
-/* ================ FOOTER ===================== */
+/*===================================================*/
+/*==================== FOOTER ======================*/
+/*=================================================*/
 
 .footer{
     display: grid;
     grid-area: footer;
-    height: 30vh;
+    height: 50vh;
     position: relative;
     border: blue 3px solid;  
     justify-items: center;  
