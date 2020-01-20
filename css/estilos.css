@@ -20,7 +20,7 @@ a{
 /*=============== CONTENEDOR PRINCIPAL ===============*/
 /*===================================================*/
 .contenedor {
-     
+
     background-image: url(../imagenes/Fondo-480.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -29,18 +29,122 @@ a{
     justify-content: center;
     height: 100vh;
     position: relative;
-    
+
 }
 
 /*==============  BACKGROUND  ===============*/
-.contenedor .imagen-centro{
-    /* background-image: url(../imagenes/Centro-Imagen-Fondo-480.svg); */
-    background-repeat: no-repeat;
-    background-position: center;
+.contenedor .contenedor-imagen-centro{
+    position: relative;
+    width: 100;
     height: 100vh;
-    width: 300px;
-    margin: auto;
+
 }
+
+.contenedor-imagen-centro .imagen-centro{
+    background-image: url(../imagenes/Imagen-centro-calavera-480.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    box-sizing: content-box;
+    height: 100vh;
+    width: 80%;
+    border: 1px solid #000;
+    margin: auto;
+    left: 10%;
+    position: absolute;
+    z-index: 100;
+}
+
+/*=================== IMAGENES ANIMADAS ==================*/
+.contenedor-animacion-maracas-izq{
+    background-image: url(../imagenes/Imagenes-fondo-animacion-maraca-izq-480.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    box-sizing: content-box;
+    height: 100vh;
+    width: 80%;
+    z-index: 200;
+    left: 10%;
+    position: absolute;
+    animation: movimientos-maracas-izq 0.5s 2s ease-out alternate-reverse 8;
+}
+
+.contenedor-animacion-maracas-der{
+    background-image: url(../imagenes/Imagenes-fondo-animacion-maraca-der-480.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    box-sizing: content-box;
+    height: 100vh;
+    width: 80%;
+    z-index: 200;
+    left: 10%;
+    position: absolute;
+    animation: movimientos-maracas-der 0.5s 1s ease-out alternate-reverse 8;
+}
+
+.contenedor-animacion-mariachi{
+    background-image: url(../imagenes/Imagenes-fondo-animacion-mariachi-480.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    box-sizing: content-box;
+    height: 100vh;
+    width: 80%;
+    z-index:200;
+    left: 10%;
+    position: absolute;
+    animation: movimientos-mariachi 1s 2.5s ease-out alternate-reverse 4;
+}
+
+.contenedor-animacion-chavo{
+    background-image: url(../imagenes/Imagenes-fondo-animacion-chavo-480.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    box-sizing: content-box;
+    height: 100vh;
+    width: 80%;
+    z-index: 0;
+    left: 10%;
+    position: absolute;
+    animation: movimientos-chavo 1s 3s ease-out alternate-reverse 6;
+}
+
+/*==================== ANIMACIONES ====================*/
+
+@keyframes movimientos-maracas-izq{
+    0% {transform: translateY(10px);}
+    25% {transform: translateY(0);}
+    75% {transform: translateY(10px);}
+    100%{transform: translateY(0);}
+}
+
+@keyframes movimientos-maracas-der{
+    0% {transform: translateY(-10px);}
+    25% {transform: translateY(0);}
+    75% {transform: translateY(-10px);}
+    100%{transform: translateY(0);}
+}
+
+@keyframes movimientos-mariachi{
+    0% {transform: rotate(5deg);}
+    25% {transform: rotate(0);}
+    75% {transform: rotate(5deg);}
+    100%{transform: rotate(0);}
+}
+
+@keyframes movimientos-chavo{
+    0% {transform: translateY(10px);}
+    25% {transform: translateY(0);}
+    75% {transform: translateY(10px);}
+    100%{transform: translateY(0);}
+}
+
+
+
+
 
 .contenedor .contenedor-cortina .contenedor-cortina-izquierda{
     position: absolute;
@@ -49,6 +153,7 @@ a{
     width:200px;
     height:750px;
     top: -100px;
+    z-index: 200;
 }
 
 .contenedor .contenedor-cortina .contenedor-cortina-derecha{
@@ -60,6 +165,7 @@ a{
     top: -100px;
     right:0 ;
     transform: scaleX(-1);
+    z-index: 200;
 }
 
 .contenedor .contenedor-guirnaldas{
@@ -73,13 +179,14 @@ a{
 .contenedor .contenedor-grid {
     position: absolute;
     width: 100%;
-    height: 100vh;   
-    top: 0;                
+    height: 100vh;
+    top: 0;
+    z-index: 300;
 }
 
 /*===================  GRILLA  ========================*/
 .contenedor .contenedor-grid .grid{
-    
+
     display:grid;
     grid-gap:10px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -126,7 +233,7 @@ a{
 /*======================BARRA DE MENÚ===================== */
 .nav-principal{
     display: flex;
-    position: fixed;   
+    position: fixed;
     /* height: calc(100vh - 4rem); */
     height: 240px;
     width: 290px;
@@ -149,7 +256,7 @@ a{
 .menu-principal{
    display: flex;
    position: absolute;
-   flex-direction: column; 
+   flex-direction: column;
    width: 80%;
    height: 80%;
    justify-content: center;
@@ -163,7 +270,7 @@ a{
     list-style: none;
     text-align: center;
     line-height: 43px;
-    
+
 
 }
 
@@ -177,13 +284,13 @@ a{
     list-style: none;
     text-align: center;
     background: rgb(107, 32, 39);
-   
+
 }
 
 
 .menu-principal a{
     font-size: 10px;
-    color: #fff;   
+    color: #fff;
 }
 
 
@@ -193,12 +300,12 @@ a{
 .contenedor-logo-principal{
     grid-area: logo;
     border:  1px solid red;
-   
+
 }
 
 .contenedor-logo-principal img{
     width: 105px;
-    margin-top: 35px; 
+    margin-top: 35px;
     margin-left: 8px;
 }
 
@@ -242,7 +349,7 @@ a{
 
 .contenedor-main .main{
 
-} 
+}
 
 
 /*======================== CORRUSEL ==================*/
@@ -252,19 +359,19 @@ a{
     border: darkmagenta 13px solid;
     z-index: 500px;
     display: none;
-}    
+}
 
 .carousel{
     position: relative;
     background: lightgreen;
     width: 10px;
     height: 10px;
-    
+
 }
 .carousel-item{
     /* background: green; */
     position: relative;
-    width: 20%;    
+    width: 20%;
 }
 
 .corousel .carousel-item img{
@@ -299,13 +406,14 @@ a{
     cursor: pointer;
 }
 
+
 .aside-derecha .contenedor-botones-aside:first-child{
-    margin-left: 68px; 
+    margin-left: 68px;
 }
 
 .aside-derecha .contenedor-botones-aside:last-child{
     margin-left: 65px;
-    margin-top: 50px; 
+    margin-top: 50px;
 }
 
 
@@ -321,12 +429,12 @@ a{
 
 .aside-izquierda .contenedor-botones-aside:last-child{
     margin-left: 10px;
-    margin-top: 30px; 
+    margin-top: 30px;
 }
 
 .aside-izquierda .contenedor-botones-aside:first-child{
     margin-left: 10px;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 
@@ -340,9 +448,9 @@ a{
     grid-area: footer;
     height: 25vh;
     position: relative;
-    border: blue 1px solid;  
-    justify-items: center;  
-    align-items: flex-end;  
+    border: blue 1px solid;
+    justify-items: center;
+    align-items: flex-end;
 
 }
 
@@ -354,9 +462,9 @@ a{
     justify-content:center;
     align-items: flex-end;
     /* background: lightskyblue; */
-    
+
 }
- 
+
 
 .footer .contenedor-footer .caja-1{
     width: 100%;
@@ -379,12 +487,12 @@ a{
     /* bottom: 220px; */
 }
 
-.footer .patron-footer{ 
+.footer .patron-footer{
     width: 100%;
-    position:absolute;  
-    bottom: 41px;   
+    position:absolute;
+    bottom: 41px;
     z-index: 400;
-} 
+}
 
  .footer .imagen-mitad-del-mundo{
     display: flex;
@@ -455,20 +563,7 @@ a{
     font-size: 27px;
 }
 
-.diseno-redes-sociales img:first-child{
+.redes-sociales img{
     position: absolute;
-    width: 46px;
-    height: 46px;
-    z-index: 400;
-    top: 89px;
-    left: 188.5px;
-}
-
-.diseno-redes-sociales img:last-child{
-    position: absolute;
-    width: 46px;
-    height: 46px;
-    z-index: 400;
-    top: 89px;
-    left: 243.5px;
+    width: 40px;
 }
