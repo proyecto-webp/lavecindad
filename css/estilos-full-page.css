@@ -45,12 +45,17 @@ h1, h2, h3, h4, h5, h6{
     position: fixed;
     align-items: center;
     justify-content: space-between;
-    z-index: 70;
+    z-index: 170;
     width: 100%;
-    margin: 0;
-    padding: 10px 10px 20px;
+    top: 60px;
+    left: 10px;
 }
 
+.nav img{
+    width: 80px;
+}
+
+/*
 .nav li,
 .nav li a{
     display: inline-block;
@@ -76,7 +81,7 @@ h1, h2, h3, h4, h5, h6{
 .menu li:hover a{
     color: orange;
 }
-    
+*/  
 
 /*===================== HEADER =================== */
 
