@@ -183,14 +183,15 @@ a{
 .contenedor .contenedor-grid {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     z-index: 300;
 }
 
 /*===================  GRILLA  ========================*/
 .contenedor .contenedor-grid .grid{
-
+    width: 100%;
+    height: 100%;
     display:grid;
     grid-gap:10px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -447,9 +448,12 @@ a{
 /*=================================================*/
 
 .footer{
+    display: flex;
     grid-area: footer;
-    height: 25vh;
+    width: 100%;
+    height: 100%;
     position: relative;
+    justify-content: center;
     align-items: flex-end;
 
 }
@@ -457,7 +461,7 @@ a{
 .footer .contenedor-footer{
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 200px;
     position: relative;
     justify-content:center;
     align-items: flex-end;
@@ -468,7 +472,7 @@ a{
 
 .footer .contenedor-footer .caja-1{
     width: 100%;
-    height: 70%;
+    height: 60%;
     position: absolute;
     background: #2C0D10;
     box-shadow: 0px 0px 40px rgba(0,0,0,10);
@@ -479,7 +483,7 @@ a{
 .footer .contenedor-footer .caja-2{
     display: flex;
     width: 100%;
-    height: 30%;
+    height: 40%;
     position: absolute;
     z-index: 0;
     align-self:flex-start;
