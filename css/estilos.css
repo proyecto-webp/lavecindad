@@ -447,12 +447,9 @@ a{
 /*=================================================*/
 
 .footer{
-    display: grid;
     grid-area: footer;
     height: 25vh;
     position: relative;
-    /* border: blue 1px solid; */
-    justify-items: center;
     align-items: flex-end;
 
 }
