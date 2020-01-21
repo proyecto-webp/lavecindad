@@ -4,14 +4,17 @@ const seccionesPagina = new  fullpage('#fullpage',{
     //Navegación
 	menu: '#menu',
 	lockAnchors: false,
-	anchors:['inicio', '1', '2', '3', '4'],
-	navigation: true,
+	anchors:['inicio', 'pagina-2', 'pagina-3', 'pagina-4', 'pagina-5',
+	'pagina-6', 'pagina-7', 'pagina-8', 'pagina-9', 'pagina-10', 'pagina-11',
+	'pagina-12', 'pagina-13', 'pagina-14', 'pagina-15'],
+	navigation: false,
 	navigationPosition: 'right',
-	navigationTooltips: ['inicio', '1', '2', '3', '4'],
+	// navigationTooltips: ['inicio', '1', '2', '3', '4'],
 	showActiveTooltip: true,
 	slidesNavigation: true,
     slidesNavPosition: 'bottom',
-    responsiveWidth: 200
+	responsiveWidth: 200,
+	loopBottom: true
 
 });
 
